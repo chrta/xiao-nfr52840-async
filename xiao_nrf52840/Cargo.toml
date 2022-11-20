@@ -3,6 +3,7 @@ name = "xiao-nrf52840-async"
 version = "0.1.0"
 edition = "2021"
 description = "An embassy-based boards support package (BSP) for Seeed Studio XIAO nRF52840 (Sense)"
+license = "MIT OR Apache-2.0"
 
 [dependencies]
 embassy-nrf = { version = "0.1.0", default-features = false, features = ["nrf52840", "gpiote", "time-driver-rtc1", "nightly", "unstable-traits"]}

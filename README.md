@@ -36,3 +36,13 @@ arm-none-eabi-objcopy -O ihex xiao-nfr52840-async-led-example xiao-nfr52840-asyn
 adafruit-nrfutil dfu genpkg --dev-type 0x0052 --application ./xiao-nfr52840-async-led-example.hex xiao_nfr52840_led_example.zip
 adafruit-nrfutil dfu serial -pkg ./xiao_nfr52840_led_example.zip -p /dev/ttyACM0 -b 115200 -fc
 ```
+
+# License
+
+This work is licensed under either of
+
+- Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE) or
+  <http://www.apache.org/licenses/LICENSE-2.0>)
+- MIT license ([LICENSE-MIT](LICENSE-MIT) or <http://opensource.org/licenses/MIT>)
+
+at your option.
