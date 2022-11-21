@@ -226,7 +226,7 @@ dependencies = [
 [[package]]
 name = "embassy-cortex-m"
 version = "0.1.0"
-source = "git+https://github.com/embassy-rs/embassy.git?branch=master#2528f451387e6c7b27c3140cd87d47521d1971a2"
+source = "git+https://github.com/lulf/embassy.git?branch=usb-logger#06fb3e425198609131e149c39a2db25aaa8c273c"
 dependencies = [
  "atomic-polyfill 1.0.1",
  "cfg-if",
@@ -235,15 +235,15 @@ dependencies = [
  "embassy-executor",
  "embassy-hal-common",
  "embassy-macros",
- "embassy-sync 0.1.0 (git+https://github.com/embassy-rs/embassy.git?branch=master)",
+ "embassy-sync",
 ]
 
 [[package]]
 name = "embassy-embedded-hal"
 version = "0.1.0"
-source = "git+https://github.com/embassy-rs/embassy.git?branch=master#2528f451387e6c7b27c3140cd87d47521d1971a2"
+source = "git+https://github.com/lulf/embassy.git?branch=usb-logger#06fb3e425198609131e149c39a2db25aaa8c273c"
 dependencies = [
- "embassy-sync 0.1.0 (git+https://github.com/embassy-rs/embassy.git?branch=master)",
+ "embassy-sync",
  "embedded-hal 0.2.7",
  "embedded-hal 1.0.0-alpha.9",
  "embedded-hal-async",
@@ -255,7 +255,7 @@ dependencies = [
 [[package]]
 name = "embassy-executor"
 version = "0.1.0"
-source = "git+https://github.com/embassy-rs/embassy.git?branch=master#2528f451387e6c7b27c3140cd87d47521d1971a2"
+source = "git+https://github.com/lulf/embassy.git?branch=usb-logger#06fb3e425198609131e149c39a2db25aaa8c273c"
 dependencies = [
  "atomic-polyfill 1.0.1",
  "cfg-if",
@@ -270,17 +270,12 @@ dependencies = [
 [[package]]
 name = "embassy-futures"
 version = "0.1.0"
-source = "git+https://github.com/embassy-rs/embassy.git?branch=master#2528f451387e6c7b27c3140cd87d47521d1971a2"
-
-[[package]]
-name = "embassy-futures"
-version = "0.1.0"
 source = "git+https://github.com/lulf/embassy.git?branch=usb-logger#a444a65ebfcea674e74dcedc7f26a7aa37f59c69"
 
 [[package]]
 name = "embassy-hal-common"
 version = "0.1.0"
-source = "git+https://github.com/embassy-rs/embassy.git?branch=master#2528f451387e6c7b27c3140cd87d47521d1971a2"
+source = "git+https://github.com/lulf/embassy.git?branch=usb-logger#06fb3e425198609131e149c39a2db25aaa8c273c"
 dependencies = [
  "num-traits",
 ]
@@ -288,7 +283,7 @@ dependencies = [
 [[package]]
 name = "embassy-macros"
 version = "0.1.0"
-source = "git+https://github.com/embassy-rs/embassy.git?branch=master#2528f451387e6c7b27c3140cd87d47521d1971a2"
+source = "git+https://github.com/lulf/embassy.git?branch=usb-logger#06fb3e425198609131e149c39a2db25aaa8c273c"
 dependencies = [
  "darling",
  "proc-macro2",
@@ -299,7 +294,7 @@ dependencies = [
 [[package]]
 name = "embassy-nrf"
 version = "0.1.0"
-source = "git+https://github.com/embassy-rs/embassy.git?branch=master#2528f451387e6c7b27c3140cd87d47521d1971a2"
+source = "git+https://github.com/lulf/embassy.git?branch=usb-logger#06fb3e425198609131e149c39a2db25aaa8c273c"
 dependencies = [
  "cfg-if",
  "cortex-m",
@@ -308,9 +303,9 @@ dependencies = [
  "embassy-cortex-m",
  "embassy-embedded-hal",
  "embassy-hal-common",
- "embassy-sync 0.1.0 (git+https://github.com/embassy-rs/embassy.git?branch=master)",
+ "embassy-sync",
  "embassy-time",
- "embassy-usb-driver 0.1.0 (git+https://github.com/embassy-rs/embassy.git?branch=master)",
+ "embassy-usb-driver",
  "embedded-hal 0.2.7",
  "embedded-hal 1.0.0-alpha.9",
  "embedded-hal-async",
@@ -321,19 +316,6 @@ dependencies = [
  "futures",
  "nrf52840-pac",
  "rand_core",
-]
-
-[[package]]
-name = "embassy-sync"
-version = "0.1.0"
-source = "git+https://github.com/embassy-rs/embassy.git?branch=master#2528f451387e6c7b27c3140cd87d47521d1971a2"
-dependencies = [
- "atomic-polyfill 1.0.1",
- "cfg-if",
- "critical-section 1.1.1",
- "embedded-io",
- "futures-util",
- "heapless",
 ]
 
 [[package]]
@@ -352,13 +334,13 @@ dependencies = [
 [[package]]
 name = "embassy-time"
 version = "0.1.0"
-source = "git+https://github.com/embassy-rs/embassy.git?branch=master#2528f451387e6c7b27c3140cd87d47521d1971a2"
+source = "git+https://github.com/lulf/embassy.git?branch=usb-logger#06fb3e425198609131e149c39a2db25aaa8c273c"
 dependencies = [
  "atomic-polyfill 1.0.1",
  "cfg-if",
  "critical-section 1.1.1",
  "defmt",
- "embassy-sync 0.1.0 (git+https://github.com/embassy-rs/embassy.git?branch=master)",
+ "embassy-sync",
  "embedded-hal 0.2.7",
  "futures-util",
  "heapless",
@@ -369,18 +351,13 @@ name = "embassy-usb"
 version = "0.1.0"
 source = "git+https://github.com/lulf/embassy.git?branch=usb-logger#a444a65ebfcea674e74dcedc7f26a7aa37f59c69"
 dependencies = [
- "embassy-futures 0.1.0 (git+https://github.com/lulf/embassy.git?branch=usb-logger)",
- "embassy-sync 0.1.0 (git+https://github.com/lulf/embassy.git?branch=usb-logger)",
- "embassy-usb-driver 0.1.0 (git+https://github.com/lulf/embassy.git?branch=usb-logger)",
+ "embassy-futures",
+ "embassy-sync",
+ "embassy-usb-driver",
  "heapless",
  "ssmarshal",
  "usbd-hid",
 ]
-
-[[package]]
-name = "embassy-usb-driver"
-version = "0.1.0"
-source = "git+https://github.com/embassy-rs/embassy.git?branch=master#2528f451387e6c7b27c3140cd87d47521d1971a2"
 
 [[package]]
 name = "embassy-usb-driver"
@@ -392,8 +369,8 @@ name = "embassy-usb-logger"
 version = "0.1.0"
 source = "git+https://github.com/lulf/embassy.git?branch=usb-logger#a444a65ebfcea674e74dcedc7f26a7aa37f59c69"
 dependencies = [
- "embassy-futures 0.1.0 (git+https://github.com/lulf/embassy.git?branch=usb-logger)",
- "embassy-sync 0.1.0 (git+https://github.com/lulf/embassy.git?branch=usb-logger)",
+ "embassy-futures",
+ "embassy-sync",
  "embassy-usb",
  "futures",
  "log",
@@ -933,7 +910,7 @@ dependencies = [
  "defmt",
  "defmt-rtt",
  "embassy-executor",
- "embassy-futures 0.1.0 (git+https://github.com/embassy-rs/embassy.git?branch=master)",
+ "embassy-futures",
  "embassy-nrf",
  "embassy-time",
  "heapless",
@@ -950,7 +927,7 @@ dependencies = [
  "defmt",
  "defmt-rtt",
  "embassy-executor",
- "embassy-futures 0.1.0 (git+https://github.com/embassy-rs/embassy.git?branch=master)",
+ "embassy-futures",
  "embassy-nrf",
  "embassy-time",
  "embassy-usb-logger",

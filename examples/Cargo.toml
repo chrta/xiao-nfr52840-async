@@ -4,11 +4,11 @@ members = [
 ]
 
 [patch.crates-io]
-embassy-nrf = { git = "https://github.com/embassy-rs/embassy.git", branch = "master" }
-embassy-executor = { git = "https://github.com/embassy-rs/embassy.git", branch = "master" }
-embassy-time = { git = "https://github.com/embassy-rs/embassy.git", branch = "master" }
-embassy-futures = { git = "https://github.com/embassy-rs/embassy.git", branch = "master" }
-embassy-sync = { git = "https://github.com/embassy-rs/embassy.git", branch = "master" }
+embassy-nrf = { git = "https://github.com/lulf/embassy.git", branch = "usb-logger" }
+embassy-executor = { git = "https://github.com/lulf/embassy.git", branch = "usb-logger" }
+embassy-time = { git = "https://github.com/lulf/embassy.git", branch = "usb-logger" }
+embassy-futures = { git = "https://github.com/lulf/embassy.git", branch = "usb-logger" }
+embassy-sync = { git = "https://github.com/lulf/embassy.git", branch = "usb-logger" }
 embassy-usb-logger = { git = "https://github.com/lulf/embassy.git", branch = "usb-logger" }
 
 nrf-softdevice = { git = "https://github.com/embassy-rs/nrf-softdevice.git", rev = "98dd17e03016cf8f9ff395cc155f9f795c818a50" }
